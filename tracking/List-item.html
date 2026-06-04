@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resource Sharing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="header">
+      <div>
+        <h1>Resource Sharing</h1>
+        <p>List resources, request items, approve and track returns.</p>
+      </div>
+    </header>
+
+    <div class="nav-buttons">
+      <button class="tab-button active" data-section="requestSection">Request Feature</button>
+      <button class="tab-button" data-section="approvalSection">Approval Tracking</button>
+      <button class="tab-button" data-section="returnSection">Return Tracking</button>
+    </div>
+
+    <section id="requestSection" class="section active-section">
+      <h2>Request Feature</h2>
+      <div class="table-panel">
+        <div class="table-header">
+          <h3>All Requests</h3>
+          <span id="totalRequests" class="tag"></span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Item</th>
+              <th>Status</th>
+              <th>Due Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="requestTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="approvalSection" class="section">
+      <h2>Approval Tracking</h2>
+      <div class="table-panel">
+        <div class="table-header">
+          <h3>Pending Approvals</h3>
+          <span id="pendingCount" class="tag"></span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Item</th>
+              <th>Status</th>
+              <th>Due Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="approvalTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="returnSection" class="section">
+      <h2>Return Tracking</h2>
+      <div class="table-panel">
+        <div class="table-header">
+          <h3>Tracked Items</h3>
+          <span id="approvedCount" class="tag"></span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Item</th>
+              <th>Status</th>
+              <th>Due Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="returnTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
