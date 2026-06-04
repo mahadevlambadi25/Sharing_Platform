@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Items</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>Campus Resource Sharing</h2>
+    <a href="details.html">Available Items</a>
+</nav>
+
+<h2>Add Resource</h2>
+
+<form id="resourceForm">
+
+    <input type="text" id="resourceName" placeholder=" Item Name" required>
+    
+    <select id="category">
+        <option>Books</option>
+        <option>Laptops</option>
+        <option>Chargers</option>
+        <option>Study Materials</option>
+    </select>
+
+    <input type="text" id="ownerName" placeholder="Owner Name" required>
+    <input type="text" id="contact" placeholder="Contact" required>
+    <input type="text" id="location" placeholder="Location" required>
+
+    <textarea id="description" placeholder="Description"></textarea required>
+
+    <select id="condition">
+        <option>New</option>
+        <option>Good</option>
+        <option>Used</option>
+    </select>
+
+    <input type="file" id="image" accept="image/*" required>
+
+    <select id="availability" required>
+        <option>Available</option>
+        <option>Unavailable</option>
+    </select>
+
+    <button type="submit">Send Request</button>
+
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
