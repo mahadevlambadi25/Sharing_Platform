@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Campus Share</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="auth-container">
+        <div class="auth-box">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join Campus Share to share books, chargers, and resources.</p>
+
+            <form id="registerForm" class="auth-form">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="yourname25@navgurukul.org" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="********" required>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <button type="submit" class="auth-btn" id="submitBtn">Register</button>
+             </form>
+
+             <p class="auth-redirect">
+                Already have an account? <a href="index.html">Sign In</a>
+             </p>
+        </div>
+      </div>
+
+      <script src="register.js"></script>
+</body>
+</html>
