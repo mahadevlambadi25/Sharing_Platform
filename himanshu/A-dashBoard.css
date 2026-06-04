@@ -1,0 +1,268 @@
+:root{
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --success: #16a34a;
+    --success-dark: #15803d;
+    --danger: #dc2626;
+    --danger-dark: #b91c1c;
+    --sidebar: #0f172a;
+    --sidebar-light: #1e293b;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --surface: #ffffff;
+    --background: #f1f5f9;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.10), transparent 32%),
+        var(--background);
+    color: var(--text);
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--sidebar), var(--sidebar-light));
+    color: rgb(138, 86, 86);
+    padding: 24px 18px;
+    position: fixed;
+    box-shadow: 12px 0 35px rgba(15, 23, 42, 0.18);
+}
+
+.sidebar h2{
+    text-align: center;
+    margin-bottom: 34px;
+    font-size: 24px;
+    letter-spacing: 0.3px;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li{
+    margin: 12px 0;
+}
+
+.sidebar ul li a{
+    color: #a9b0b8;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 13px 16px;
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.sidebar ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.12);
+    color: rgb(218, 189, 189);
+    transform: translateX(4px);
+}
+
+.main{
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 28px;
+}
+
+.navbar{
+    background: rgba(255, 255, 255, 0.92);
+    padding: 22px 24px;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.navbar h1{
+    font-size: 28px;
+    color: var(--text);
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    background: var(--surface);
+    padding: 26px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: 0.25s ease;
+}
+
+.card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.card h2{
+    color: var(--primary);
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.card p{
+    color: var(--muted);
+    font-weight: 600;
+}
+
+table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+table th{
+    background: var(--primary);
+    color: white;
+    padding: 16px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+table td{
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    color: #334155;
+}
+
+table tbody tr{
+    transition: 0.2s ease;
+}
+
+table tbody tr:hover{
+    background-color: #f8fafc;
+}
+
+table tbody tr:last-child td{
+    border-bottom: none;
+}
+
+.section-title{
+    margin: 24px 0 14px;
+    color: var(--text);
+    font-size: 22px;
+}
+
+.table-space{
+    margin-bottom: 40px;
+}
+
+.approve,
+.reject{
+    color: white;
+    border: none;
+    min-width: 92px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.22s ease;
+}
+
+.approve{
+    background-color: var(--success);
+}
+
+.reject{
+    background-color: var(--danger);
+}
+
+.approve:hover{
+    background-color: var(--success-dark);
+    transform: translateY(-2px);
+}
+
+.reject:hover{
+    background-color: var(--danger-dark);
+    transform: translateY(-2px);
+}
+
+.approved-text{
+    color: var(--success);
+    font-weight: 800;
+}
+
+.rejected-text{
+    color: var(--danger);
+    font-weight: 800;
+}
+
+@media (max-width: 800px){
+    .container{
+        display: block;
+    }
+
+    .sidebar{
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 18px;
+    }
+
+    .sidebar h2{
+        margin-bottom: 16px;
+    }
+
+    .sidebar ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 8px;
+    }
+
+    .sidebar ul li{
+        margin: 0;
+    }
+
+    .sidebar ul li a{
+        text-align: center;
+        font-size: 14px;
+    }
+
+
+
+    .main{
+        margin-left: 0;
+        width: 100%;
+        padding: 18px;
+    }
+
+    .navbar h1{
+        font-size: 23px;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
